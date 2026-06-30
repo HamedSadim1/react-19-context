@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/context/auth-provider";
+import { ThemeProvider } from "@/components/theme-provider";
 import { getCurrentUser } from "@/lib/auth";
 
 const geistSans = Geist({
@@ -22,9 +23,11 @@ export default async function RootLayout({
 }>) {
   const user = await getCurrentUser();
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.className} antialiased`}>
-        <AuthProvider user={user}>{children}</AuthProvider>
+        <ThemeProvider>
+          <AuthProvider user={user}>{children}</AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
