@@ -5,7 +5,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui";
 import { useAuth } from "@/context/auth-provider";
 import { UserInfo } from "./user-info";
 import { UserProfileLoader } from "./user-profile-loader";

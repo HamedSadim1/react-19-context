@@ -1,6 +1,5 @@
 import { LogOut } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Button, Skeleton } from "@/components/ui";
 import { useAuth } from "@/context/auth-provider";
 
 export function SignOutButton() {

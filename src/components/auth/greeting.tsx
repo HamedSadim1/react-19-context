@@ -1,4 +1,4 @@
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "@/components/ui";
 import { useAuth } from "@/context/auth-provider";
 import { Sparkles } from "lucide-react";
 

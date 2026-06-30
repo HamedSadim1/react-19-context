@@ -1,15 +1,14 @@
 "use client";
 
-import { Footer } from "@/components/layout/footer";
-import { Navbar } from "@/components/layout/navbar";
-import { UserProfile } from "@/components/profile/user-profile";
+import { Footer, Navbar } from "@/components/layout";
+import { UserProfile } from "@/components/profile";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui";
 import { Activity, Shield, Zap } from "lucide-react";
 
 const stats = [
