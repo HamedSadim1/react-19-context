@@ -1,6 +1,6 @@
-import { Greeting } from "@/components/greeting";
-import { SignOutButton } from "@/components/sign-out-button";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Greeting } from "@/components/auth/greeting";
+import { SignOutButton } from "@/components/auth/sign-out-button";
+import { ThemeToggle } from "@/components/theme/theme-toggle";
 
 export function Navbar() {
   return (

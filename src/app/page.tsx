@@ -1,8 +1,8 @@
 "use client";
 
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
-import { UserProfile } from "@/components/user-profile";
+import { Footer } from "@/components/layout/footer";
+import { Navbar } from "@/components/layout/navbar";
+import { UserProfile } from "@/components/profile/user-profile";
 import {
   Card,
   CardContent,
