@@ -10,7 +10,7 @@ import {
 
 export function UserProfileLoader() {
   return (
-    <Card className="border-border/50 bg-card/50 mx-auto max-w-md backdrop-blur-sm">
+    <Card variant="glass" className="mx-auto max-w-md">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <UserRound className="text-primary/40 h-5 w-5" />

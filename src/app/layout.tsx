@@ -4,6 +4,7 @@ import "./globals.css";
 import { AuthProvider } from "@/context/auth-provider";
 import { ThemeProvider } from "@/components/theme";
 import { getCurrentUser } from "@/lib/auth";
+import { siteConfig } from "@/config/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,9 +12,8 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "React 19 Context Example",
-  description:
-    "Learn how and when to use Context in React 19 with this tutorial by Coding in Flow.",
+  title: siteConfig.shortName,
+  description: siteConfig.description,
 };
 
 export default async function RootLayout({

@@ -1,0 +1,21 @@
+export const EASE_OUT_CUBIC = [0.25, 0.46, 0.45, 0.94] as const;
+
+export const VIEWPORT_ONCE = { once: true, margin: "-64px" } as const;
+
+export const ANIM = {
+  PAGE_TRANSITION_DURATION: 0.3,
+  FADE_IN_DURATION: 0.6,
+  FADE_IN_SCALE_DURATION: 0.5,
+  STAGGER_ITEM_DURATION: 0.5,
+  STAGGER_CHILDREN_DELAY: 0.12,
+  STAGGER_INITIAL_DELAY: 0.1,
+  OFFSET_LARGE: 32,
+  OFFSET_SMALL: 24,
+  SCALE_START: 0.95,
+  PROFILE_SECTION_DELAY: 0.2,
+} as const;
+
+export const AUTH = {
+  FETCH_DELAY_MS: 800,
+  SIGNOUT_DELAY_MS: 300,
+} as const;

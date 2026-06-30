@@ -1,3 +1,6 @@
+import { AUTH } from "@/config/constants";
+import { delay } from "@/lib/utils";
+
 export interface User {
   id: string;
   firstName: string;
@@ -6,8 +9,6 @@ export interface User {
   avatar: string;
   createdAt: Date;
 }
-
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const mockUser: User = {
   id: "1",
@@ -21,11 +22,11 @@ const mockUser: User = {
 
 export async function getCurrentUser(): Promise<User> {
   // Simulate network delay
-  await delay(800);
+  await delay(AUTH.FETCH_DELAY_MS);
   return mockUser;
 }
 
 export async function signOut() {
-  await delay(300);
+  await delay(AUTH.SIGNOUT_DELAY_MS);
   // In a real app, this would clear tokens, cookies, etc.
 }

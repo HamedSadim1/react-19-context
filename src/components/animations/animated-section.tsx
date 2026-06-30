@@ -2,18 +2,19 @@
 
 import { motion, type Variants } from "framer-motion";
 import type { ReactNode } from "react";
+import { ANIM, EASE_OUT_CUBIC, VIEWPORT_ONCE } from "@/config/constants";
 
 const fadeInUp: Variants = {
   hidden: {
     opacity: 0,
-    y: 32,
+    y: ANIM.OFFSET_LARGE,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94] as const,
+      duration: ANIM.FADE_IN_DURATION,
+      ease: EASE_OUT_CUBIC,
     },
   },
 };
@@ -21,14 +22,14 @@ const fadeInUp: Variants = {
 const fadeInScale: Variants = {
   hidden: {
     opacity: 0,
-    scale: 0.95,
+    scale: ANIM.SCALE_START,
   },
   visible: {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.5,
-      ease: [0.25, 0.46, 0.45, 0.94] as const,
+      duration: ANIM.FADE_IN_SCALE_DURATION,
+      ease: EASE_OUT_CUBIC,
     },
   },
 };
@@ -54,7 +55,7 @@ export function AnimatedSection({
       variants={variants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-64px" }}
+      viewport={VIEWPORT_ONCE}
       transition={{ delay }}
     >
       {children}
@@ -67,8 +68,8 @@ const staggerContainer: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.1,
+      staggerChildren: ANIM.STAGGER_CHILDREN_DELAY,
+      delayChildren: ANIM.STAGGER_INITIAL_DELAY,
     },
   },
 };
@@ -76,14 +77,14 @@ const staggerContainer: Variants = {
 const staggerItem: Variants = {
   hidden: {
     opacity: 0,
-    y: 24,
+    y: ANIM.OFFSET_SMALL,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
-      ease: [0.25, 0.46, 0.45, 0.94] as const,
+      duration: ANIM.STAGGER_ITEM_DURATION,
+      ease: EASE_OUT_CUBIC,
     },
   },
 };
@@ -105,7 +106,7 @@ function StaggerContainer({
       variants={staggerContainer}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-64px" }}
+      viewport={VIEWPORT_ONCE}
       transition={{ delayChildren: delay }}
     >
       {children}
